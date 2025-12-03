@@ -29,3 +29,13 @@ for (let k = 0; k <= arr1.length - 1; k++) {
   }
 }
 console.log(arr1);
+
+
+//Using destructring 
+
+let a =2;
+let b =3;
+
+[a,b]=[b,a]
+
+console.log(a,b);
