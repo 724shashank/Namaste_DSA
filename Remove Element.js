@@ -5,7 +5,7 @@ let nums = [3, 2, 2, 3];
 let val = 3;
 var removeElement = function (nums, val) {
   //let k=0
-  let i = 0;
+  let i = 0; //here we are making our own indexes
   for (let j = 0; j <= nums.length - 1; j++) {
     if (nums[j] !== val) {
       nums[i] = nums[j];
