@@ -1,4 +1,4 @@
-//Write a Program to reverse the array
+//Write a Program to reverse the array "in place"
 
 let str = ["h", "e", "l", "l", "o"];
 let old;
