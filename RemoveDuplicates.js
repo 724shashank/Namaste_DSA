@@ -14,3 +14,20 @@ var removeDuplicates = function (nums) {
   }
   return count;
 };
+
+//By Creating new Array using object to track the occurance of numbers
+
+let arr = [3, 1, 2, 2, 4, 5, 5, 0, 0];
+let obj = {};
+let sec = [];
+let count = 0;
+
+for (let i = 0; i <= arr.length - 1; i++) {
+  if (!obj[arr[i]]) {
+    obj[arr[i]] = 1;
+    sec[count] = arr[i];
+    count++;
+  }
+}
+
+console.log(sec);
