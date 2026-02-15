@@ -1,17 +1,18 @@
-let arr = [5,2,4,1];
-let k=arr.length-1;
+let arr = [9,1,2,3,4,5];
 
-function bubblesort(arr){
+function bubblesort(arr,k=arr.length-1){
 if(k<=0) return arr;
-   for(let i=0;i<=k;i++){
+let flag =0;
+   for(let i=0;i<k;i++){
     if(arr[i]>arr[i+1]){
+        flag++;
         let j = arr[i];
         arr[i]=arr[i+1];
         arr[i+1]=j;
     }
     }
-    k--;
-return bubblesort(arr)
+if(flag === 0) return arr;  
+return bubblesort(arr,k=k-1)
 }
 
 console.log(bubblesort(arr))
