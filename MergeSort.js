@@ -1,7 +1,7 @@
-let arr = [8,4,5,6,9,1,3,6,0];
-function merge(arr){
-   if(arr.length<=1) return arr;
-    let len = Math.floor(arr.length/2);
+let nums = [8,4,5,6,9,1,3,6,0];
+function merge(nums){
+   if(nums.length<=1) return nums;
+    let len = Math.floor(nums.length/2);
     let a = merge(arr.slice(0,len));
     let b = merge(arr.slice(len,arr.length));
     
@@ -31,4 +31,4 @@ function merge(arr){
 return mergeSortedArray(a,b);
 }
 
-console.log(merge(arr))
+console.log(merge(nums))
