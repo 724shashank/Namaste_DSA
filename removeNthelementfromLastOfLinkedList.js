@@ -18,14 +18,14 @@ function removeNthFromEnd(head,n){
        curr=curr.next;
        i++;
     }
-    console.log(i)
+  
     let position = i-n;
     if(position === 0){
         return head.next;
     }
     let newCurr=head;
     let j =0;
-    while(newCurr && j!=position-1 ){
+    while(j!=position-1){
         newCurr = newCurr.next; 
         j++;
     }
@@ -35,4 +35,27 @@ function removeNthFromEnd(head,n){
     return head;
 }
 
-console.log(removeNthFromEnd(head,1))
+//Second Method
+
+function removeNthFromEnd(head,n){
+   let sentinel=new Node();
+   sentinel.next = head;
+   let fast = sentinel;
+for(let i=0;i<n;i++){
+    fast=fast.next;
+}
+let slow = sentinel;
+while(fast.next){
+    fast= fast.next;
+    slow= slow.next;
+}
+   slow.next = slow.next.next; 
+   return sentinel.next;
+}
+
+let result = removeNthFromEnd(head,2);
+
+while(result){
+    console.log(result.val);
+    result=result.next;
+}
